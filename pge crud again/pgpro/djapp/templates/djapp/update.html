@@ -1,0 +1,14 @@
+{% extends 'djapp/base.html' %}
+{% block content %}
+<div class="row">
+    <div class="col-sm-8">
+      <h1 class="alert alert-success">Update Record</h1>
+      <form action="" method="POST">
+         {% csrf_token %}
+         {{form.as_p}}
+         <input type="submit" value="update" class="btn btn-success">
+         <a href="{% url 'addanddata' %}" class="btn btn-warning btn-sm">Back to home</a>
+       </form>
+    </div>
+</div>
+{% endblock content %}
